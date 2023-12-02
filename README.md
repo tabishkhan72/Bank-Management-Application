@@ -1,7 +1,6 @@
 # Bank-Management-Application
-As you can see from the class diagram below are user interface will consist of function where you can view the account balance depending on the type of account you have either savings or checking accounts. This then takes us to the transaction section from where you can either transfer money from one account to another or get payment in the form of cash or credit but before this is done the system needs to authorize the transaction based on the bank database
 
-
+Banking applications are crucial tools that facilitate essential banking operations, including but not limited to loan requests, money transfers, bill payments, and more. As a result, these applications are among the most significant and commonly used applications available.
 
 
 
