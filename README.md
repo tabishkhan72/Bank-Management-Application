@@ -1,62 +1,104 @@
-# Bank-Management-Application
+# **🏦 Bank Management Application**  
 
-Banking applications are crucial tools that facilitate essential banking operations, including but not limited to loan requests, money transfers, bill payments, and more. As a result, these applications are among the most significant and commonly used applications available.
+A **comprehensive banking system** designed to handle **essential banking operations** such as **loan requests, money transfers, bill payments, and customer account management**. This system efficiently manages customer transactions using **queue-based operations** and follows core **Object-Oriented Programming (OOP) principles** like **encapsulation, inheritance, polymorphism, and abstraction**.  
 
+---
 
+## **🚀 Features**  
 
-ENQUEUE :
+### **📌 Core Functionalities**  
 
-This code defines the function enqueue(), which adds a new node to the end of a linked list. The linked list represents a bank queue for customers who want to deposit or withdraw cash.
+#### ✅ **Banking Transactions (Queue System)**  
+- **Enqueue (Deposit/Withdraw Transactions)**  
+  - Users can **queue transactions** for deposits or withdrawals.  
+  - Ensures **confirmation before processing** transactions.  
+  - Uses **dynamic memory allocation** for queue management.  
 
-The function starts by creating a new withdrawDepositNode object, which contains information about the transaction, such as the account number, cash amount, and transaction type.
+- **Dequeue (Process Transactions)**  
+  - Transactions are **processed in FIFO order**.  
+  - If no transactions exist, displays a **queue empty message**.  
+  - Provides **transaction details** for better transparency.  
 
-Then, the user is prompted to choose between withdrawing cash or depositing cash. If an invalid option is entered, the function exits.
+#### ✅ **Bank Account Management**  
+- Supports **new account creation** with customer details.  
+- Allows users to request a **debit card (with PIN setup)** or a **cheque book**.  
+- Implements **a linked list** to store multiple customer accounts.  
 
-Next, the user is prompted to enter the account number and cash amount for the transaction. The information entered is displayed on the screen, and the user is asked to confirm the transaction by typing 'Y' or 'N'.
+#### ✅ **Bill Payments (Queue System)**  
+- Customers can **enqueue bill payment requests**.  
+- Bills are **processed sequentially** to ensure accuracy.  
+- Prevents **overlapping payments** via queue validation.  
 
-If the user confirms the transaction, the new node is added to the end of the linked list. If the list is empty, the new node becomes the front and rear node. Otherwise, the new node is linked to the previous rear node and becomes the new rear node.
+---
 
-If the user does not confirm the transaction, the new node is deleted and the function exits.
+## **🛠 Object-Oriented Programming (OOP) Principles**  
 
-Finally, the user is asked to press any key to return to the bank menu.
+| **OOP Concept**  | **Implementation in the Project** |
+|------------------|----------------------------------|
+| **Encapsulation** | Uses classes like `billPaymentQueue`, `withdrawDepositQueue`, `newAccountNode`, and `BankQueue` to encapsulate data and operations. |
+| **Inheritance** | `billPaymentQueue` inherits from `bankAccountsDatabase` (single inheritance). |
+| **Polymorphism** | Uses **function overloading** (e.g., `isEmpty()` function behaves differently in `billPaymentQueue` and `withdrawDepositQueue`). |
+| **Abstraction** | Implements abstraction in `enqueue()`, `dequeue()`, and banking operations by managing transactions via queues without exposing internal details. |
 
+---
 
+## **💻 Tech Stack**  
 
+| **Component**  | **Technology Used** |
+|---------------|----------------|
+| **Programming Language** | C++ |
+| **Data Structures** | Linked Lists, Queues |
+| **OOP Concepts** | Encapsulation, Inheritance, Polymorphism, Abstraction |
 
-DEQUEUE :
+---
 
-This code implements a queue data structure for a banking system that can handle withdrawal and deposit transactions. The enqueue() function is used to add a transaction to the back of the queue and the dequeue() function is used to remove the transaction from the front of the queue. The displayWithdrawDepositQueue() function is used to display all transactions currently in the queue.
+## **📥 Installation & Usage**  
 
-The withdrawDepositNode struct represents a node in the queue and contains fields for the account number, cash amount, and transaction type (withdrawal or deposit). The front and rear pointers are used to keep track of the front and back of the queue.
+### **1️⃣ Clone the Repository**  
+```bash
+git clone https://github.com/tabishkhan72/Bank-Management-Application.git
+cd Bank-Management-Application
+```
 
-In enqueue(), the user is prompted to choose between a withdrawal or deposit transaction and then asked to enter the account number and cash amount. The transaction details are displayed for confirmation and the user is asked to confirm the transaction. If confirmed, the new transaction is added to the back of the queue using dynamic memory allocation.
+### **2️⃣ Compile the Program**  
+Use a C++ compiler to compile the code:  
+```bash
+g++ bank_management.cpp -o bank_management
+```
 
-In dequeue(), if the queue is empty, a message is displayed indicating that there are no transactions left to process. If not empty, the transaction at the front of the queue is removed and its details are displayed.
+### **3️⃣ Run the Application**  
+```bash
+./bank_management
+```
 
-In displayWithdrawDepositQueue(), all transactions currently in the queue
+---
 
+## **📊 Key Functional Modules**  
 
+### **🟢 Enqueue Function (Deposit/Withdraw Transactions)**  
+- Users **choose** between **deposit or withdrawal**.  
+- Requires **account number and cash amount** input.  
+- **Transaction confirmation** before queuing.  
+- Uses **linked list to manage queued transactions**.  
 
+### **🔴 Dequeue Function (Process Transactions)**  
+- Transactions are processed in **FIFO order**.  
+- **Displays transaction details** before removing them from the queue.  
+- Handles **empty queue conditions** to avoid errors.  
 
-Bank database :
+### **🔵 Bank Database (Customer Management)**  
+- Supports **new account creation** with user details.  
+- Provides **optional features** like **debit card PIN setup** and **cheque book requests**.  
+- Uses **linked list structure** to maintain multiple customer accounts.  
 
-This code seems to be a part of a larger program for managing bank accounts. The class bankAccountsDatabase represents a database of bank accounts and has a newAccountNode as a nested class that represents a node of the linked list that will hold the bank accounts.
+---
 
-The insertNewAccount() function allows a user to create a new account by taking input from the user for various fields such as name, email address, phone number, etc. The function then creates a new node of type newAccountNode and initializes it with the provided data. If the user opts for a debit card, the function also prompts them to enter a 4-digit PIN for the debit card. Similarly, if the user wants a chequebook, the function sets the chequeBook flag in the node to true.
+## **🚀 Future Enhancements**  
 
-After initializing the node, the function prints out the details of the new account and prompts the user to confirm the details. If the user confirms, the function adds the new node to the linked list. If the linked list is empty, the new node becomes the head of the list.
+✅ **Implement a Graphical User Interface (GUI)** for better user interaction.  
+✅ **Add authentication mechanisms** (Username/Password, OTP).  
+✅ **Introduce AI-based fraud detection** for transaction security.  
+✅ **Integrate real-time notifications** for successful transactions.  
+✅ **Cloud-based storage** to maintain banking records securely.  
 
-
-Encapsulation -
-billPaymentQueue,payBillNode,withdrawDepositQueue,newAccountNode,BankQueue
-The code uses classes to encapsulate related functions and data together, such as the BankQueue class and the Address class.The code defines two classes, billPaymentQueue and withdrawDepositQueue, which encapsulate the properties and behavior of a queue for bill payments and withdraw/deposit transactions, respectively.
-
-Inheritance : billPaymentQueue and bankAccountDatabase are in a parent and child relationship, where billPaymentQueue inherits functions and data from bankAccountsDatabase.  Its a single inheritance.  In single inheritance, a class is allowed to inherit from only one class. i.e. one subclass is inherited by one base class only.
-
-
-Polymorphism - isEmpty()(uses function overloading)
-The code does not explicitly use polymorphism, but it does use function overloading, which is a form of polymorphism. For example, the isEmpty() function is overloaded in both the billPaymentQueue and withdrawDepositQueue classes to provide different behavior based on the queue type.
-
-
-Abstraction - billPaymentQueue,withdrawDepositQueue,newAccountNode,BankMenu,enqueue(),dequeue()
-The code creates instances of the billPaymentQueue and withdrawDepositQueue classes using the new keyword to allocate memory dynamically. The instances are then manipulated using member functions, such as enqueue() and dequeue(), to perform operations on the queues.
+---
