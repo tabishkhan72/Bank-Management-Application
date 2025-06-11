@@ -83,7 +83,7 @@ g++ bank_management.cpp -o bank_management
 
 ### **🔴 Dequeue Function (Process Transactions)**  
 - Transactions are processed in **FIFO order**.  
-- **Displays transaction details** before removing them from the queue.  
+- **Displays transaction detail** before removing them from the queue.  
 - Handles **empty queue conditions** to avoid errors.  
 
 ### **🔵 Bank Database (Customer Management)**  
