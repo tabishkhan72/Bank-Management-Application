@@ -10,9 +10,9 @@ A **comprehensive banking system** designed to handle **essential banking operat
 
 #### ✅ **Banking Transactions (Queue System)**  
 - **Enqueue (Deposit/Withdraw Transactions)**  
-  - Users can **queue transactions** for deposits or withdrawals  
-  - Ensures **confirmation before processing** transactions  
-  - Uses **dynamic memory allocation** for queue management  
+  - Users can **queue transactions** for deposits or withdrawals.  
+  - Ensures **confirmation before processing** transactions. 
+  - Uses **dynamic memory allocation** for queue management.  
 
 - **Dequeue (Process Transactions)**  
   - Transactions are **processed in FIFO order**  
